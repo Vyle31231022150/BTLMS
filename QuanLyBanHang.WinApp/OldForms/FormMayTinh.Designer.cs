@@ -2,189 +2,211 @@
 {
     partial class FormMayTinh
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+            if (disposing && (components != null)) components.Dispose();
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            txtInput = new TextBox();
-            txtResult = new TextBox();
-            label3 = new Label();
-            btnCong = new Button();
-            tnTru = new Button();
-            btnNhan = new Button();
-            btnChia = new Button();
-            btnDel = new Button();
-            txtInput1 = new TextBox();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtInput = new System.Windows.Forms.TextBox();
+            this.txtResult = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnCong = new System.Windows.Forms.Button();
+            this.tnTru = new System.Windows.Forms.Button();
+            this.btnNhan = new System.Windows.Forms.Button();
+            this.btnChia = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.txtInput1 = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(41, 52);
-            label1.Name = "label1";
-            label1.Size = new Size(85, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Số thứ nhất";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label1.Location = new System.Drawing.Point(50, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Số thứ nhất";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(41, 101);
-            label2.Name = "label2";
-            label2.Size = new Size(76, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Số thứ hai";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label2.Location = new System.Drawing.Point(50, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 19);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Số thứ hai";
             // 
             // txtInput
             // 
-            txtInput.BackColor = Color.FromArgb(224, 224, 224);
-            txtInput.Location = new Point(148, 48);
-            txtInput.Name = "txtInput";
-            txtInput.Size = new Size(221, 27);
-            txtInput.TabIndex = 2;
-            txtInput.TextAlign = HorizontalAlignment.Right;
-            txtInput.KeyPress += txtInput_KeyPress;
-            // 
-            // txtResult
-            // 
-            txtResult.BackColor = Color.FromArgb(224, 224, 224);
-            txtResult.Location = new Point(148, 216);
-            txtResult.Name = "txtResult";
-            txtResult.ReadOnly = true;
-            txtResult.Size = new Size(221, 27);
-            txtResult.TabIndex = 4;
-            txtResult.TextAlign = HorizontalAlignment.Right;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(41, 219);
-            label3.Name = "label3";
-            label3.Size = new Size(60, 20);
-            label3.TabIndex = 5;
-            label3.Text = "Kết quả";
-            // 
-            // btnCong
-            // 
-            btnCong.Location = new Point(41, 154);
-            btnCong.Name = "btnCong";
-            btnCong.Size = new Size(33, 29);
-            btnCong.TabIndex = 6;
-            btnCong.Text = "+";
-            btnCong.UseVisualStyleBackColor = true;
-            btnCong.Click += btnCong_Click;
-            // 
-            // tnTru
-            // 
-            tnTru.Location = new Point(98, 154);
-            tnTru.Name = "tnTru";
-            tnTru.Size = new Size(33, 29);
-            tnTru.TabIndex = 7;
-            tnTru.Text = "-";
-            tnTru.UseVisualStyleBackColor = true;
-            tnTru.Click += tnTru_Click;
-            // 
-            // btnNhan
-            // 
-            btnNhan.Location = new Point(160, 154);
-            btnNhan.Name = "btnNhan";
-            btnNhan.Size = new Size(33, 29);
-            btnNhan.TabIndex = 8;
-            btnNhan.Text = "*";
-            btnNhan.UseVisualStyleBackColor = true;
-            btnNhan.Click += btnNhan_Click;
-            // 
-            // btnChia
-            // 
-            btnChia.Location = new Point(223, 154);
-            btnChia.Name = "btnChia";
-            btnChia.Size = new Size(33, 29);
-            btnChia.TabIndex = 9;
-            btnChia.Text = "/";
-            btnChia.UseVisualStyleBackColor = true;
-            btnChia.Click += btnChia_Click;
-            // 
-            // btnDel
-            // 
-            btnDel.Location = new Point(289, 154);
-            btnDel.Name = "btnDel";
-            btnDel.Size = new Size(78, 29);
-            btnDel.TabIndex = 10;
-            btnDel.Text = "Del";
-            btnDel.UseVisualStyleBackColor = true;
-            btnDel.Click += btnDel_Click;
+            this.txtInput.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtInput.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtInput.Location = new System.Drawing.Point(150, 45);
+            this.txtInput.Name = "txtInput";
+            this.txtInput.Size = new System.Drawing.Size(250, 29);
+            this.txtInput.TabIndex = 2;
+            this.txtInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput_KeyPress);
             // 
             // txtInput1
             // 
-            txtInput1.BackColor = Color.FromArgb(224, 224, 224);
-            txtInput1.Location = new Point(148, 94);
-            txtInput1.Name = "txtInput1";
-            txtInput1.Size = new Size(221, 27);
-            txtInput1.TabIndex = 11;
-            txtInput1.TextAlign = HorizontalAlignment.Right;
-            txtInput1.KeyPress += txtInput1_KeyPress;
+            this.txtInput1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtInput1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtInput1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtInput1.Location = new System.Drawing.Point(150, 95);
+            this.txtInput1.Name = "txtInput1";
+            this.txtInput1.Size = new System.Drawing.Size(250, 29);
+            this.txtInput1.TabIndex = 11;
+            this.txtInput1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtInput1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInput1_KeyPress);
+            // 
+            // btnCong
+            // 
+            this.btnCong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnCong.FlatAppearance.BorderSize = 0;
+            this.btnCong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCong.ForeColor = System.Drawing.Color.White;
+            this.btnCong.Location = new System.Drawing.Point(50, 160);
+            this.btnCong.Name = "btnCong";
+            this.btnCong.Size = new System.Drawing.Size(50, 50);
+            this.btnCong.TabIndex = 6;
+            this.btnCong.Text = "+";
+            this.btnCong.UseVisualStyleBackColor = false;
+            this.btnCong.Click += new System.EventHandler(this.btnCong_Click);
+            // 
+            // tnTru
+            // 
+            this.tnTru.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.tnTru.FlatAppearance.BorderSize = 0;
+            this.tnTru.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.tnTru.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.tnTru.ForeColor = System.Drawing.Color.White;
+            this.tnTru.Location = new System.Drawing.Point(110, 160);
+            this.tnTru.Name = "tnTru";
+            this.tnTru.Size = new System.Drawing.Size(50, 50);
+            this.tnTru.TabIndex = 7;
+            this.tnTru.Text = "-";
+            this.tnTru.UseVisualStyleBackColor = false;
+            this.tnTru.Click += new System.EventHandler(this.tnTru_Click);
+            // 
+            // btnNhan
+            // 
+            this.btnNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnNhan.FlatAppearance.BorderSize = 0;
+            this.btnNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnNhan.ForeColor = System.Drawing.Color.White;
+            this.btnNhan.Location = new System.Drawing.Point(170, 160);
+            this.btnNhan.Name = "btnNhan";
+            this.btnNhan.Size = new System.Drawing.Size(50, 50);
+            this.btnNhan.TabIndex = 8;
+            this.btnNhan.Text = "*";
+            this.btnNhan.UseVisualStyleBackColor = false;
+            this.btnNhan.Click += new System.EventHandler(this.btnNhan_Click);
+            // 
+            // btnChia
+            // 
+            this.btnChia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.btnChia.FlatAppearance.BorderSize = 0;
+            this.btnChia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnChia.ForeColor = System.Drawing.Color.White;
+            this.btnChia.Location = new System.Drawing.Point(230, 160);
+            this.btnChia.Name = "btnChia";
+            this.btnChia.Size = new System.Drawing.Size(50, 50);
+            this.btnChia.TabIndex = 9;
+            this.btnChia.Text = "/";
+            this.btnChia.UseVisualStyleBackColor = false;
+            this.btnChia.Click += new System.EventHandler(this.btnChia_Click);
+            // 
+            // btnDel
+            // 
+            this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.btnDel.FlatAppearance.BorderSize = 0;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnDel.ForeColor = System.Drawing.Color.White;
+            this.btnDel.Location = new System.Drawing.Point(300, 160);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(100, 50);
+            this.btnDel.TabIndex = 10;
+            this.btnDel.Text = "Del";
+            this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(50, 240);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 19);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Kết quả";
+            // 
+            // txtResult
+            // 
+            this.txtResult.BackColor = System.Drawing.Color.White;
+            this.txtResult.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtResult.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.txtResult.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.txtResult.Location = new System.Drawing.Point(150, 235);
+            this.txtResult.Name = "txtResult";
+            this.txtResult.ReadOnly = true;
+            this.txtResult.Size = new System.Drawing.Size(250, 32);
+            this.txtResult.TabIndex = 4;
+            this.txtResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // FormMayTinh
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(439, 327);
-            Controls.Add(txtInput1);
-            Controls.Add(btnDel);
-            Controls.Add(btnChia);
-            Controls.Add(btnNhan);
-            Controls.Add(tnTru);
-            Controls.Add(btnCong);
-            Controls.Add(label3);
-            Controls.Add(txtResult);
-            Controls.Add(txtInput);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Name = "FormMayTinh";
-            ShowIcon = false;
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Máy tính bỏ túi";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(480, 350);
+            this.Controls.Add(this.txtInput1);
+            this.Controls.Add(this.btnDel);
+            this.Controls.Add(this.btnChia);
+            this.Controls.Add(this.btnNhan);
+            this.Controls.Add(this.tnTru);
+            this.Controls.Add(this.btnCong);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtResult);
+            this.Controls.Add(this.txtInput);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Name = "FormMayTinh";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Máy tính bỏ túi";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private TextBox txtInput;
-        private TextBox txtResult;
-        private Label label3;
-        private Button btnCong;
-        private Button tnTru;
-        private Button btnNhan;
-        private Button btnChia;
-        private Button btnDel;
-        private TextBox txtInput1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtInput;
+        private System.Windows.Forms.TextBox txtResult;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnCong;
+        private System.Windows.Forms.Button tnTru;
+        private System.Windows.Forms.Button btnNhan;
+        private System.Windows.Forms.Button btnChia;
+        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.TextBox txtInput1;
     }
 }
