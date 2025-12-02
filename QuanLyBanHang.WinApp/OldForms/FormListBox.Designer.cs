@@ -28,58 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lstSanPham = new ListBox();
-            btnThoat = new Button();
-            label1 = new Label();
-            SuspendLayout();
+            this.lstSanPham = new System.Windows.Forms.ListBox();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // lstSanPham
             // 
-            lstSanPham.FormattingEnabled = true;
-            lstSanPham.Location = new Point(73, 99);
-            lstSanPham.Margin = new Padding(3, 4, 3, 4);
-            lstSanPham.Name = "lstSanPham";
-            lstSanPham.Size = new Size(706, 444);
-            lstSanPham.TabIndex = 0;
+            this.lstSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstSanPham.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lstSanPham.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lstSanPham.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lstSanPham.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lstSanPham.FormattingEnabled = true;
+            this.lstSanPham.ItemHeight = 28;
+            this.lstSanPham.Location = new System.Drawing.Point(50, 90);
+            this.lstSanPham.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lstSanPham.Name = "lstSanPham";
+            this.lstSanPham.Size = new System.Drawing.Size(882, 450);
+            this.lstSanPham.TabIndex = 0;
             // 
             // btnThoat
             // 
-            btnThoat.BackColor = Color.FromArgb(224, 224, 224);
-            btnThoat.Location = new Point(372, 585);
-            btnThoat.Margin = new Padding(3, 4, 3, 4);
-            btnThoat.Name = "btnThoat";
-            btnThoat.Size = new Size(75, 29);
-            btnThoat.TabIndex = 1;
-            btnThoat.Text = "Thoát";
-            btnThoat.UseVisualStyleBackColor = false;
-            btnThoat.Click += btnThoat_Click;
+            this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(87)))), ((int)(((byte)(34)))));
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThoat.FlatAppearance.BorderSize = 0;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnThoat.ForeColor = System.Drawing.Color.White;
+            this.btnThoat.Location = new System.Drawing.Point(421, 570);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(140, 45);
+            this.btnThoat.TabIndex = 1;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label1.Location = new Point(73, 57);
-            label1.Name = "label1";
-            label1.Size = new Size(169, 16);
-            label1.TabIndex = 2;
-            label1.Text = "DANH MỤC SẢN PHẨM";
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(982, 80);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "DANH MỤC SẢN PHẨM";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormListBox
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(982, 653);
-            Controls.Add(label1);
-            Controls.Add(btnThoat);
-            Controls.Add(lstSanPham);
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "FormListBox";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Đưa dữ liệu lên ListBox";
-            Load += FormListBox_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(982, 653);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.lstSanPham);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "FormListBox";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Đưa dữ liệu lên ListBox";
+            this.Load += new System.EventHandler(this.FormListBox_Load);
+            this.ResumeLayout(false);
 
         }
 

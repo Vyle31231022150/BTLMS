@@ -9,7 +9,7 @@ namespace QuanLyBanHang.WinApp
     public partial class FormMain : Form
     {
         private readonly WeatherService _weatherService = new WeatherService();
-
+        private Form activeForm = null;
         public FormMain()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace QuanLyBanHang.WinApp
                 {
                     // 1. Gán ảnh từ Resources (Thay 'background' bằng tên ảnh của bạn)
                     // Nếu bạn chưa có ảnh thì dòng này sẽ lỗi đỏ -> Hãy làm Bước 1 trước
-                    ctl.BackgroundImage = Properties.Resources.background;
+                    ctl.BackgroundImage = Properties.Resources.ThanhVy;
 
                     // 2. Chỉnh cách hiển thị ảnh (Stretch: Kéo giãn, Zoom: Giữ tỉ lệ)
                     ctl.BackgroundImageLayout = ImageLayout.Zoom;
@@ -37,33 +37,12 @@ namespace QuanLyBanHang.WinApp
         }
         private void SetupEvents()
         {
-            // --- 1. MENU HỆ THỐNG (Giữ nguyên) ---
-            dangNhapToolStripMenuItem.Click += (s, e) => PerformLogin();
-            dangXuatToolStripMenuItem.Click += (s, e) => Logout();
-            thoatToolStripMenuItem.Click += (s, e) => Application.Exit();
-
-            // --- 2. MENU CHỨC NĂNG (Giữ nguyên) ---
-            quanLySanPhamToolStripMenuItem.Click += (s, e) => OpenChildForm<FormProductNTier>();
-            traCuuThoiTietToolStripMenuItem.Click += (s, e) => OpenChildForm<FormWeather>();
-
-            // Menu bài tập cũ
-            mayTinhToolStripMenuItem.Click += (s, e) => OpenChildForm<FormMayTinh>();
-            listBoxDemoToolStripMenuItem.Click += (s, e) => OpenChildForm<FormListBox>();
-            treeViewToolStripMenuItem.Click += (s, e) => OpenChildForm<FormTreeView>();
-            hoaDonToolStripMenuItem.Click += (s, e) => OpenChildForm<FormHoaDon>();
-
-            // --- 3. XỬ LÝ TOOLBAR (TOOLSTRIP) --- 
-            // Đây là phần bạn vừa yêu cầu thêm:
-
-            // Button 3: Giới thiệu (About)
-            toolStripButton3.Click += (s, e) => OpenChildForm<FormAbout>();
-
-            // Các nút cũ (Giữ nguyên)
-            // Button 5: Thoát
-            toolStripButton5.Click += (s, e) => Application.Exit();
-            // Button 6: Sản phẩm
-            toolStripButton6.Click += (s, e) => OpenChildForm<FormProductNTier>();
-            toolStripButton7.Click += (s, e) => OpenChildForm<FormWeather>();
+            // Bind sự kiện cho các nút mới
+            btnSanPham.Click += (s, e) => OpenChildForm<FormProductNTier>();
+            btnThoiTiet.Click += (s, e) => OpenChildForm<FormWeather>();
+            btnHoaDon.Click += (s, e) => OpenChildForm<FormHoaDon>();
+            btnAbout.Click += (s, e) => OpenChildForm<FormAbout>();
+            btnThoat.Click += (s, e) => Application.Exit();
         }
 
         private void SetupTimer()
@@ -81,23 +60,29 @@ namespace QuanLyBanHang.WinApp
         // Hàm xử lý đăng nhập
         private void PerformLogin()
         {
-            // Đóng tất cả form con đang mở để màn hình gọn gàng
-            foreach (var child in MdiChildren) child.Close();
+            // 1. Đóng form con nếu đang mở
+            if (activeForm != null) activeForm.Close();
 
+            // 2. Hiện form đăng nhập
             LoginForm login = new LoginForm();
             if (login.ShowDialog() == DialogResult.OK)
             {
                 var user = LoginForm.CurrentUser;
                 lblUser.Text = $"Nhân viên: {user?.TenNV}";
 
-                // Mở khóa các menu sau khi đăng nhập thành công
-                tuHocLMSToolStripMenuItem.Enabled = true;
-                baiTapCuToolStripMenuItem.Enabled = true;
+                // --- SỬA LỖI TẠI ĐÂY ---
+                // Thay vì bật Menu cũ, ta bật các Nút bấm mới
+                btnSanPham.Enabled = true;
+                btnThoiTiet.Enabled = true;
+                btnHoaDon.Enabled = true;
+
+                // Nếu muốn nút About luôn mở thì không cần chỉnh
+                // btnAbout.Enabled = true; 
             }
             else
             {
-                // Nếu người dùng tắt form đăng nhập mà chưa đăng nhập -> Thoát App
-                // Application.Exit(); // Bạn có thể bỏ comment dòng này nếu muốn bắt buộc đăng nhập
+                // Nếu không đăng nhập mà tắt form -> Thoát
+                // Application.Exit(); 
             }
         }
 

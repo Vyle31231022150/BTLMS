@@ -29,243 +29,269 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            menuStrip1 = new MenuStrip();
-            hethong = new ToolStripMenuItem();
-            dangNhapToolStripMenuItem = new ToolStripMenuItem();
-            dangXuatToolStripMenuItem = new ToolStripMenuItem();
-            thoatToolStripMenuItem = new ToolStripMenuItem();
-            tuHocLMSToolStripMenuItem = new ToolStripMenuItem();
-            quanLySanPhamToolStripMenuItem = new ToolStripMenuItem();
-            traCuuThoiTietToolStripMenuItem = new ToolStripMenuItem();
-            baiTapCuToolStripMenuItem = new ToolStripMenuItem();
-            mayTinhToolStripMenuItem = new ToolStripMenuItem();
-            listBoxDemoToolStripMenuItem = new ToolStripMenuItem();
-            treeViewToolStripMenuItem = new ToolStripMenuItem();
-            hoaDonToolStripMenuItem = new ToolStripMenuItem();
-            toolStrip1 = new ToolStrip();
-            toolStripButton3 = new ToolStripButton();
-            toolStripButton5 = new ToolStripButton();
-            toolStripButton6 = new ToolStripButton();
-            toolStripButton7 = new ToolStripButton();
+            panelSidebar = new Panel();
+            btnThoat = new Button();
+            btnAbout = new Button();
+            btnHoaDon = new Button();
+            btnThoiTiet = new Button();
+            btnSanPham = new Button();
+            panelLogo = new Panel();
+            lblLogo = new Label();
+            panelHeader = new Panel();
+            lblTitle = new Label();
             statusStrip1 = new StatusStrip();
             lblUser = new ToolStripStatusLabel();
             lblTime = new ToolStripStatusLabel();
             lblTemp = new ToolStripStatusLabel();
             timer = new System.Windows.Forms.Timer(components);
-            menuStrip1.SuspendLayout();
-            toolStrip1.SuspendLayout();
+            panelSidebar.SuspendLayout();
+            panelLogo.SuspendLayout();
+            panelHeader.SuspendLayout();
             statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // menuStrip1
+            // panelSidebar
             // 
-            menuStrip1.BackColor = Color.FromArgb(224, 224, 224);
-            menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { hethong, tuHocLMSToolStripMenuItem, baiTapCuToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1482, 28);
-            menuStrip1.TabIndex = 1;
-            menuStrip1.Text = "menuStrip1";
+            panelSidebar.BackColor = Color.FromArgb(51, 51, 76);
+            panelSidebar.Controls.Add(btnThoat);
+            panelSidebar.Controls.Add(btnAbout);
+            panelSidebar.Controls.Add(btnHoaDon);
+            panelSidebar.Controls.Add(btnThoiTiet);
+            panelSidebar.Controls.Add(btnSanPham);
+            panelSidebar.Controls.Add(panelLogo);
+            panelSidebar.Dock = DockStyle.Left;
+            panelSidebar.Location = new Point(0, 0);
+            panelSidebar.Margin = new Padding(4, 4, 4, 4);
+            panelSidebar.Name = "panelSidebar";
+            panelSidebar.Size = new Size(275, 941);
+            panelSidebar.TabIndex = 0;
             // 
-            // hethong
+            // btnThoat
             // 
-            hethong.DropDownItems.AddRange(new ToolStripItem[] { dangNhapToolStripMenuItem, dangXuatToolStripMenuItem, thoatToolStripMenuItem });
-            hethong.Name = "hethong";
-            hethong.Size = new Size(85, 24);
-            hethong.Text = "Hệ thống";
+            btnThoat.Dock = DockStyle.Bottom;
+            btnThoat.FlatAppearance.BorderSize = 0;
+            btnThoat.FlatStyle = FlatStyle.Flat;
+            btnThoat.Font = new Font("Segoe UI", 10F);
+            btnThoat.ForeColor = Color.Gainsboro;
+            btnThoat.Image = Properties.Resources.T;
+            btnThoat.ImageAlign = ContentAlignment.MiddleLeft;
+            btnThoat.Location = new Point(0, 866);
+            btnThoat.Margin = new Padding(4, 4, 4, 4);
+            btnThoat.Name = "btnThoat";
+            btnThoat.Padding = new Padding(15, 0, 0, 0);
+            btnThoat.Size = new Size(275, 75);
+            btnThoat.TabIndex = 6;
+            btnThoat.Text = "  Thoát";
+            btnThoat.TextAlign = ContentAlignment.MiddleLeft;
+            btnThoat.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnThoat.UseVisualStyleBackColor = true;
             // 
-            // dangNhapToolStripMenuItem
+            // btnAbout
             // 
-            dangNhapToolStripMenuItem.Name = "dangNhapToolStripMenuItem";
-            dangNhapToolStripMenuItem.Size = new Size(165, 26);
-            dangNhapToolStripMenuItem.Text = "Đăng nhập";
+            btnAbout.Dock = DockStyle.Top;
+            btnAbout.FlatAppearance.BorderSize = 0;
+            btnAbout.FlatStyle = FlatStyle.Flat;
+            btnAbout.Font = new Font("Segoe UI", 10F);
+            btnAbout.ForeColor = Color.Gainsboro;
+            btnAbout.Image = Properties.Resources.GT;
+            btnAbout.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAbout.Location = new Point(0, 499);
+            btnAbout.Margin = new Padding(4, 4, 4, 4);
+            btnAbout.Name = "btnAbout";
+            btnAbout.Padding = new Padding(15, 0, 0, 0);
+            btnAbout.Size = new Size(275, 122);
+            btnAbout.TabIndex = 4;
+            btnAbout.Text = "  Giới thiệu (About)";
+            btnAbout.TextAlign = ContentAlignment.MiddleLeft;
+            btnAbout.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAbout.UseVisualStyleBackColor = true;
             // 
-            // dangXuatToolStripMenuItem
+            // btnHoaDon
             // 
-            dangXuatToolStripMenuItem.Name = "dangXuatToolStripMenuItem";
-            dangXuatToolStripMenuItem.Size = new Size(165, 26);
-            dangXuatToolStripMenuItem.Text = "Đăng xuất";
+            btnHoaDon.Dock = DockStyle.Top;
+            btnHoaDon.FlatAppearance.BorderSize = 0;
+            btnHoaDon.FlatStyle = FlatStyle.Flat;
+            btnHoaDon.Font = new Font("Segoe UI", 10F);
+            btnHoaDon.ForeColor = Color.Gainsboro;
+            btnHoaDon.Image = Properties.Resources.HD;
+            btnHoaDon.ImageAlign = ContentAlignment.MiddleLeft;
+            btnHoaDon.Location = new Point(0, 362);
+            btnHoaDon.Margin = new Padding(4, 4, 4, 4);
+            btnHoaDon.Name = "btnHoaDon";
+            btnHoaDon.Padding = new Padding(15, 0, 0, 0);
+            btnHoaDon.Size = new Size(275, 137);
+            btnHoaDon.TabIndex = 3;
+            btnHoaDon.Text = "  Lập Hóa Đơn";
+            btnHoaDon.TextAlign = ContentAlignment.MiddleLeft;
+            btnHoaDon.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnHoaDon.UseVisualStyleBackColor = true;
             // 
-            // thoatToolStripMenuItem
+            // btnThoiTiet
             // 
-            thoatToolStripMenuItem.Name = "thoatToolStripMenuItem";
-            thoatToolStripMenuItem.Size = new Size(165, 26);
-            thoatToolStripMenuItem.Text = "Thoát";
+            btnThoiTiet.Dock = DockStyle.Top;
+            btnThoiTiet.FlatAppearance.BorderSize = 0;
+            btnThoiTiet.FlatStyle = FlatStyle.Flat;
+            btnThoiTiet.Font = new Font("Segoe UI", 10F);
+            btnThoiTiet.ForeColor = Color.Gainsboro;
+            btnThoiTiet.Image = Properties.Resources.sun;
+            btnThoiTiet.ImageAlign = ContentAlignment.MiddleLeft;
+            btnThoiTiet.Location = new Point(0, 237);
+            btnThoiTiet.Margin = new Padding(4, 4, 4, 4);
+            btnThoiTiet.Name = "btnThoiTiet";
+            btnThoiTiet.Padding = new Padding(15, 0, 0, 0);
+            btnThoiTiet.Size = new Size(275, 125);
+            btnThoiTiet.TabIndex = 2;
+            btnThoiTiet.Text = "  Tra cứu Thời tiết";
+            btnThoiTiet.TextAlign = ContentAlignment.MiddleLeft;
+            btnThoiTiet.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnThoiTiet.UseVisualStyleBackColor = true;
             // 
-            // tuHocLMSToolStripMenuItem
+            // btnSanPham
             // 
-            tuHocLMSToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { quanLySanPhamToolStripMenuItem, traCuuThoiTietToolStripMenuItem });
-            tuHocLMSToolStripMenuItem.Name = "tuHocLMSToolStripMenuItem";
-            tuHocLMSToolStripMenuItem.Size = new Size(100, 24);
-            tuHocLMSToolStripMenuItem.Text = "Tự học LMS";
+            btnSanPham.Dock = DockStyle.Top;
+            btnSanPham.FlatAppearance.BorderSize = 0;
+            btnSanPham.FlatStyle = FlatStyle.Flat;
+            btnSanPham.Font = new Font("Segoe UI", 10F);
+            btnSanPham.ForeColor = Color.Gainsboro;
+            btnSanPham.Image = Properties.Resources.SP;
+            btnSanPham.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSanPham.Location = new Point(0, 100);
+            btnSanPham.Margin = new Padding(4, 4, 4, 4);
+            btnSanPham.Name = "btnSanPham";
+            btnSanPham.Padding = new Padding(15, 0, 0, 0);
+            btnSanPham.Size = new Size(275, 137);
+            btnSanPham.TabIndex = 1;
+            btnSanPham.Text = "  Quản lý Sản phẩm";
+            btnSanPham.TextAlign = ContentAlignment.MiddleLeft;
+            btnSanPham.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnSanPham.UseVisualStyleBackColor = true;
             // 
-            // quanLySanPhamToolStripMenuItem
+            // panelLogo
             // 
-            quanLySanPhamToolStripMenuItem.Name = "quanLySanPhamToolStripMenuItem";
-            quanLySanPhamToolStripMenuItem.Size = new Size(212, 26);
-            quanLySanPhamToolStripMenuItem.Text = "Quản lý Sản phẩm";
+            panelLogo.BackColor = Color.FromArgb(39, 39, 58);
+            panelLogo.Controls.Add(lblLogo);
+            panelLogo.Dock = DockStyle.Top;
+            panelLogo.Location = new Point(0, 0);
+            panelLogo.Margin = new Padding(4, 4, 4, 4);
+            panelLogo.Name = "panelLogo";
+            panelLogo.Size = new Size(275, 100);
+            panelLogo.TabIndex = 0;
             // 
-            // traCuuThoiTietToolStripMenuItem
+            // lblLogo
             // 
-            traCuuThoiTietToolStripMenuItem.Name = "traCuuThoiTietToolStripMenuItem";
-            traCuuThoiTietToolStripMenuItem.Size = new Size(212, 26);
-            traCuuThoiTietToolStripMenuItem.Text = "Tra cứu Thời tiết";
+            lblLogo.Dock = DockStyle.Fill;
+            lblLogo.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lblLogo.ForeColor = Color.LightGray;
+            lblLogo.Location = new Point(0, 0);
+            lblLogo.Margin = new Padding(4, 0, 4, 0);
+            lblLogo.Name = "lblLogo";
+            lblLogo.Size = new Size(275, 100);
+            lblLogo.TabIndex = 0;
+            lblLogo.Text = "QUẢN LÝ\r\nBÁN HÀNG";
+            lblLogo.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // baiTapCuToolStripMenuItem
+            // panelHeader
             // 
-            baiTapCuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mayTinhToolStripMenuItem, listBoxDemoToolStripMenuItem, treeViewToolStripMenuItem, hoaDonToolStripMenuItem });
-            baiTapCuToolStripMenuItem.Name = "baiTapCuToolStripMenuItem";
-            baiTapCuToolStripMenuItem.Size = new Size(89, 24);
-            baiTapCuToolStripMenuItem.Text = "Bài tập cũ";
+            panelHeader.BackColor = Color.FromArgb(0, 150, 136);
+            panelHeader.Controls.Add(lblTitle);
+            panelHeader.Dock = DockStyle.Top;
+            panelHeader.Location = new Point(275, 0);
+            panelHeader.Margin = new Padding(4, 4, 4, 4);
+            panelHeader.Name = "panelHeader";
+            panelHeader.Size = new Size(1577, 100);
+            panelHeader.TabIndex = 1;
             // 
-            // mayTinhToolStripMenuItem
+            // lblTitle
             // 
-            mayTinhToolStripMenuItem.Name = "mayTinhToolStripMenuItem";
-            mayTinhToolStripMenuItem.Size = new Size(184, 26);
-            mayTinhToolStripMenuItem.Text = "Máy tính";
-            // 
-            // listBoxDemoToolStripMenuItem
-            // 
-            listBoxDemoToolStripMenuItem.Name = "listBoxDemoToolStripMenuItem";
-            listBoxDemoToolStripMenuItem.Size = new Size(184, 26);
-            listBoxDemoToolStripMenuItem.Text = "ListBox Demo";
-            // 
-            // treeViewToolStripMenuItem
-            // 
-            treeViewToolStripMenuItem.Name = "treeViewToolStripMenuItem";
-            treeViewToolStripMenuItem.Size = new Size(184, 26);
-            treeViewToolStripMenuItem.Text = "TreeView";
-            // 
-            // hoaDonToolStripMenuItem
-            // 
-            hoaDonToolStripMenuItem.Name = "hoaDonToolStripMenuItem";
-            hoaDonToolStripMenuItem.Size = new Size(184, 26);
-            hoaDonToolStripMenuItem.Text = "Hóa đơn";
-            // 
-            // toolStrip1
-            // 
-            toolStrip1.BackColor = Color.FromArgb(224, 224, 224);
-            toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton3, toolStripButton5, toolStripButton6, toolStripButton7 });
-            toolStrip1.Location = new Point(0, 28);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1482, 27);
-            toolStrip1.TabIndex = 2;
-            toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripButton3
-            // 
-            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton3.Image = Properties.Resources.GT;
-            toolStripButton3.ImageTransparentColor = Color.Magenta;
-            toolStripButton3.Name = "toolStripButton3";
-            toolStripButton3.Size = new Size(29, 24);
-            toolStripButton3.Text = "AboutUS";
-            // 
-            // toolStripButton5
-            // 
-            toolStripButton5.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton5.Image = Properties.Resources.T;
-            toolStripButton5.ImageTransparentColor = Color.Magenta;
-            toolStripButton5.Name = "toolStripButton5";
-            toolStripButton5.Size = new Size(29, 24);
-            toolStripButton5.Text = "Thoát";
-            // 
-            // toolStripButton6
-            // 
-            toolStripButton6.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton6.Image = Properties.Resources.SP;
-            toolStripButton6.ImageTransparentColor = Color.Magenta;
-            toolStripButton6.Name = "toolStripButton6";
-            toolStripButton6.Size = new Size(29, 24);
-            toolStripButton6.Text = "Sản phẩm";
-            // 
-            // toolStripButton7
-            // 
-            toolStripButton7.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton7.Image = Properties.Resources.sun;
-            toolStripButton7.ImageTransparentColor = Color.Magenta;
-            toolStripButton7.Name = "toolStripButton7";
-            toolStripButton7.Size = new Size(29, 24);
-            toolStripButton7.Text = "Thời tiết";
+            lblTitle.Dock = DockStyle.Fill;
+            lblTitle.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            lblTitle.ForeColor = Color.White;
+            lblTitle.Location = new Point(0, 0);
+            lblTitle.Margin = new Padding(4, 0, 4, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(1577, 100);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "TRANG CHỦ HỆ THỐNG";
+            lblTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // statusStrip1
             // 
             statusStrip1.ImageScalingSize = new Size(20, 20);
             statusStrip1.Items.AddRange(new ToolStripItem[] { lblUser, lblTime, lblTemp });
-            statusStrip1.Location = new Point(0, 727);
+            statusStrip1.Location = new Point(275, 909);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(1482, 26);
-            statusStrip1.TabIndex = 4;
+            statusStrip1.Padding = new Padding(1, 0, 18, 0);
+            statusStrip1.Size = new Size(1577, 32);
+            statusStrip1.TabIndex = 2;
             statusStrip1.Text = "statusStrip1";
             // 
             // lblUser
             // 
+            lblUser.BackColor = Color.Transparent;
             lblUser.Name = "lblUser";
-            lblUser.Size = new Size(46, 20);
+            lblUser.Size = new Size(57, 25);
             lblUser.Text = "Guest";
             // 
             // lblTime
             // 
+            lblTime.BackColor = Color.Transparent;
             lblTime.Name = "lblTime";
-            lblTime.Size = new Size(36, 20);
+            lblTime.Size = new Size(44, 25);
             lblTime.Text = "--:--";
             // 
             // lblTemp
             // 
+            lblTemp.BackColor = Color.Transparent;
             lblTemp.Name = "lblTemp";
-            lblTemp.Size = new Size(76, 20);
+            lblTemp.Size = new Size(93, 25);
             lblTemp.Text = "Nhiệt độ...";
+            // 
+            // timer
+            // 
+            timer.Enabled = true;
+            timer.Interval = 1000;
             // 
             // FormMain
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1482, 753);
+            ClientSize = new Size(1852, 941);
             Controls.Add(statusStrip1);
-            Controls.Add(toolStrip1);
-            Controls.Add(menuStrip1);
+            Controls.Add(panelHeader);
+            Controls.Add(panelSidebar);
             IsMdiContainer = true;
-            MainMenuStrip = menuStrip1;
+            Margin = new Padding(4, 4, 4, 4);
             Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "HỆ THỐNG QUẢN LÝ BÁN HÀNG";
+            Text = "Hệ thống Quản Lý Bán Hàng - Modern UI";
             WindowState = FormWindowState.Maximized;
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
+            Load += FormMain_Load;
+            panelSidebar.ResumeLayout(false);
+            panelLogo.ResumeLayout(false);
+            panelHeader.ResumeLayout(false);
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
+
         }
 
         #endregion
 
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem hethong;
-        private ToolStripMenuItem dangNhapToolStripMenuItem;
-        private ToolStripMenuItem dangXuatToolStripMenuItem;
-        private ToolStripMenuItem thoatToolStripMenuItem;
-        private ToolStripMenuItem baiTapCuToolStripMenuItem;
-        private ToolStripMenuItem tuHocLMSToolStripMenuItem;
-        private ToolStripMenuItem quanLySanPhamToolStripMenuItem;
-        private ToolStripMenuItem traCuuThoiTietToolStripMenuItem;
-        private ToolStrip toolStrip1;
-        private ToolStripButton toolStripButton3;
-        private ToolStripButton toolStripButton5;
-        private StatusStrip statusStrip1;
-        private ToolStripStatusLabel lblUser;
-        private ToolStripStatusLabel lblTime;
-        private ToolStripStatusLabel lblTemp;
-        private ToolStripMenuItem mayTinhToolStripMenuItem;
-        private ToolStripMenuItem listBoxDemoToolStripMenuItem;
-        private ToolStripButton toolStripButton6;
-        private ToolStripButton toolStripButton7;
+        private System.Windows.Forms.Panel panelSidebar;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Panel panelHeader;
+        private System.Windows.Forms.Button btnSanPham;
+        private System.Windows.Forms.Button btnThoiTiet;
+        private System.Windows.Forms.Button btnHoaDon;
+        private System.Windows.Forms.Button btnAbout;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Label lblLogo;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel lblUser;
+        private System.Windows.Forms.ToolStripStatusLabel lblTime;
+        private System.Windows.Forms.ToolStripStatusLabel lblTemp;
         private System.Windows.Forms.Timer timer;
-        private ToolStripMenuItem treeViewToolStripMenuItem;
-        private ToolStripMenuItem hoaDonToolStripMenuItem;
     }
 }

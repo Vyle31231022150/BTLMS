@@ -14,7 +14,8 @@ namespace QuanLyBanHang.Services
         {
             try
             {
-                string url = $"https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current_weather=true";
+                string url = $" https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&current_weather=true";
+           
                 var json = await _client.GetStringAsync(url);
                 dynamic data = JsonConvert.DeserializeObject(json);
 
